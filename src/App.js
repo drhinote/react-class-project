@@ -10,6 +10,7 @@ import MovieForm from './Components/LukasPage/movieForm';
 import CircleClicker from './Components/CircleClicker/CircleClicker.jsx';
 import NameForm from './Components/NameForm/Form'
 import App21 from "./Components/App21/App21";
+import AlexList from './Components/AlexList/AlexList';
 
 //DCM(1a) -+ import {ColorList, ColorBox} from './Components/ComponentImportList';
 //DCM(1b) -- The Code in comment 1a is an alternative way of importing all component pieces in fewer lines of code using the file ComponentImportList.js.
@@ -24,6 +25,7 @@ const Routes = {
   CircleClicker: 'Dan',
   NameForm: 'Anthony',
   JacobApp21: "JacobApp21",
+  AlexList: 'Alex',
 };
 
 export default function App() {
@@ -49,6 +51,8 @@ export default function App() {
         return <CircleClicker/>;
       case 'NameForm':
         return <NameForm title='Yay React!' />;
+      case 'AlexList':
+        return <AlexList />;
       default:
         <div />;
     }
