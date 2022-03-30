@@ -11,6 +11,7 @@ import CircleClicker from './Components/CircleClicker/CircleClicker.jsx';
 import NameForm from './Components/NameForm/Form'
 import App21 from "./Components/App21/App21";
 import AlexList from './Components/AlexList/AlexList';
+import ColorClick from './Components/ColorClick/ColorClick';
 
 //DCM(1a) -+ import {ColorList, ColorBox} from './Components/ComponentImportList';
 //DCM(1b) -- The Code in comment 1a is an alternative way of importing all component pieces in fewer lines of code using the file ComponentImportList.js.
@@ -26,6 +27,7 @@ const Routes = {
   NameForm: 'Anthony',
   JacobApp21: "JacobApp21",
   AlexList: 'Alex',
+  ColorClick: 'Frank',
 };
 
 export default function App() {
@@ -53,6 +55,8 @@ export default function App() {
         return <NameForm title='Yay React!' />;
       case 'AlexList':
         return <AlexList />;
+      case 'ColorClick':
+        return <ColorClick />; 
       default:
         <div />;
     }
