@@ -18,7 +18,7 @@ export default function Navbar({ setSelected, routes }) {
 
   return (
     <nav style={navStyles}>
-      {Object.keys(routes).map(key => <p onClick={(e) => setSelected(key)}>{routes[key]} &ensp; </p>)}
+      {Object.keys(routes).map(key => <p onClick={(e) => setSelected(routes[key])}>{key} </p>)}
       {/* DCM = added a space beteen navbar links. */}    
     </nav>
   );
