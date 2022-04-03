@@ -1,8 +1,4 @@
 
-
-
-
-
    
     
     
@@ -35,7 +31,9 @@ export default function App() {
   const [route, setRoute] = useState(null);
 
 
-  const routes = {
+  const router = {
+    setRoute,
+    routes: {
         Jili:  <Names />,
         Christopher: <ColorSlider />,
         Aaron: <TicTacToe />,
@@ -46,16 +44,18 @@ export default function App() {
         Dan: <CircleClicker/>,
         Anthony: <NameForm title='Yay React!' />,
         Alex:  <AlexList />,
-        Frank: <ColorClick />
+        Frank: <ColorClick />,
         Emuhit: <Minesweeper/>
+     }
   };
     
 
   return (
     <div>
-      <Navbar setSelected={setRoute} routes={routes} />
+      <Navbar router={router} />
       {route}
     </div>
   );
 }
+
 
