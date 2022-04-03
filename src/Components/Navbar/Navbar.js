@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './Navbar.css';
 
 export default function Navbar({ setSelected, routes }) {
 
@@ -8,6 +8,7 @@ export default function Navbar({ setSelected, routes }) {
     gridDirection: 'row',
     justifyContent: 'center',
     backgroundColor: 'aquamarine',
+    flexWrap: 'wrap',
   };
 
   const linkStyles = {
@@ -17,7 +18,8 @@ export default function Navbar({ setSelected, routes }) {
 
   return (
     <nav style={navStyles}>
-      {Object.keys(routes).map(key => <p onClick={(e) => setSelected(key)}>{routes[key]}</p>)}
+      {Object.keys(routes).map(key => <p onClick={(e) => setSelected(routes[key])}>{key} </p>)}
+      {/* DCM = added a space beteen navbar links. */}    
     </nav>
   );
 }
