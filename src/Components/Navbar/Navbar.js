@@ -1,25 +1,14 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+
+import { Box, Tabs, Tab } from '@mui/material';
 
 export default function Navbar({ router }) {
 
-  const navStyles = {
-    display: 'flex',
-    gridDirection: 'row',
-    justifyContent: 'center',
-    backgroundColor: 'aquamarine',
-    flexWrap: 'wrap',
-  };
-
-  const linkStyles = {
-    margin: '10px',
-    cursor: 'pointer',
-  };
-
   return (
-    <nav style={navStyles}>
-      {router.routes.map(key => <p onClick={(e) => router.navigate(key)}>{key} </p>)}
-      {/* DCM = added a space beteen navbar links. */}    
-    </nav>
-  );
-}
+    <Box sx={{ borderBottom: 1, borderColor: 'grey' }}>
+      <Tabs onChange={(e, route) => router.navigate(route)} variant="scrollable">
+       { router.routes.map(route => <Tab label={route} value={route}/>)}
+      </Tabs>
+    </Box>);
+
+  }
