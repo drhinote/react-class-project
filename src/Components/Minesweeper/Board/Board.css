@@ -1,0 +1,8 @@
+button{
+  margin-bottom: 40px;
+}
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(8, 0fr);
+}

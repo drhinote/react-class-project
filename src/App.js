@@ -1,3 +1,17 @@
+
+
+
+
+
+   
+    
+    
+  
+
+
+
+
+
 import React, { useState } from 'react';
 import './style.css';
 import Navbar from './Components/Navbar/Navbar';
@@ -12,7 +26,7 @@ import App21 from "./Components/App21/App21";
 import AlexList from './Components/AlexList/AlexList';
 import ColorClick from './Components/ColorClick/ColorClick';
 import DakotaPage from './Components/DakotaPage/DakotaPage';
-
+import Minesweeper from './Components/Minesweeper/Minesweeper';
 //DCM(1a) -+ import {ColorList, ColorBox} from './Components/ComponentImportList';
 //DCM(1b) -- The Code in comment 1a is an alternative way of importing all component pieces in fewer lines of code using the file ComponentImportList.js.
 
@@ -33,6 +47,7 @@ export default function App() {
         Anthony: <NameForm title='Yay React!' />,
         Alex:  <AlexList />,
         Frank: <ColorClick />
+        Emuhit: <Minesweeper/>
   };
     
 
@@ -43,3 +58,4 @@ export default function App() {
     </div>
   );
 }
+
