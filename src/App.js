@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import { Navbar, Names, ColorSlider, ColorBox, TicTacToe, MovieForm, CircleClicker, NameForm, App21, AlexList, ColorClick, DakotaPage, Minesweeper } from './Components/Common';
+import { Navbar, Names, ColorSlider, ColorBox, TicTacToe, MovieForm, CircleClicker, NameForm, App21, AlexList, ColorClick, DakotaPage, Minesweeper } from './Components/ComponentImportList';
 
 const routes = {
         Jili:  <Names />,
