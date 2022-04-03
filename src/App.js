@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import Navbar from './Components/Navbar/Navbar';
 import ColorList from './Components/ColorList/ColorList';
+import Minesweeper from './Components/Minesweeper/Minesweeper'
 
 const Routes = {
   ColorList: 'Fungii',
+  Minesweeper: "Emuhit"
 };
 
 export default function App() {
@@ -15,6 +17,8 @@ export default function App() {
       case 'ColorList':
         return <ColorList />;
       ///  new routes
+      case 'Minesweeper':
+        return <Minesweeper />;
       default:
         <div />;
     }
