@@ -44,7 +44,7 @@ const routes = {
 export default function App() {
   const [route, setRoute] = useState(null);
 
-  const Router = (routesObj, updateRoute) => {
+  const Router = function (routesObj, updateRoute) {
     this.routes = Object.keys(routesObj);
     this.navigate = (key)=>updateRoute(routesObj[key]);
   };
