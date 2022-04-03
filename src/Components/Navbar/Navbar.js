@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 
-export default function Navbar({ setSelected, routes }) {
+export default function Navbar({ router }) {
+  const setSelected = router.setRoute;
+  const routes = router.routes;
 
   const navStyles = {
     display: 'flex',
