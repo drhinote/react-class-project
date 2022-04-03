@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 export default function Navbar({ router }) {
-  const setSelected = router.setRoute;
-  const routes = router.routes;
 
   const navStyles = {
     display: 'flex',
@@ -20,7 +18,7 @@ export default function Navbar({ router }) {
 
   return (
     <nav style={navStyles}>
-      {Object.keys(routes).map(key => <p onClick={(e) => setSelected(routes[key])}>{key} </p>)}
+      {router.routes.map(key => <p onClick={(e) => router.navigate(key)}>{key} </p>)}
       {/* DCM = added a space beteen navbar links. */}    
     </nav>
   );
