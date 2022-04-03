@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import './style.css';
-import { Navbar, Names, ColorSlider, ColorBox, TicTacToe, MovieForm, CircleClicker, NameForm, App21, AlexList, ColorClick, DakotaPage, Minesweeper } from './Components/ComponentImportList';
+import all from './Components/ComponentImportList';
 
 const routes = {
-        Jili:  <Names />,
-        Christopher: <ColorSlider />,
-        Aaron: <TicTacToe />,
-        Damien: <ColorBox />,
-        Dakota: <DakotaPage />,
-        Lukas: <MovieForm />,
-        Jacob: <App21 />,
-        Dan: <CircleClicker/>,
-        Anthony: <NameForm title='Yay React!' />,
-        Alex:  <AlexList />,
-        Frank: <ColorClick />,
-        Emuhit: <Minesweeper/>
+        Jili:  <all.Names />,
+        Christopher: <all ColorSlider />,
+        Aaron: <all.TicTacToe />,
+        Damien: <all.ColorBox />,
+        Dakota: <all.DakotaPageD />,
+        Lukas: <all.MovieForm />,
+        Jacob: <all.App21 />,
+        Dan: <all.CircleClicker/>,
+        Anthony: <all.NameForm title='Yay React!' />,
+        Alex:  <all.AlexList />,
+        Frank: <all.ColorClick />,
+        Emuhit: <all.Minesweeper/>
      };
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <div>
-      <Navbar router={router} />
+      <all.Navbar router={router} />
       {route}
     </div>
   );
