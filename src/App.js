@@ -4,7 +4,7 @@ import all from './Components/ComponentImportList';
 
 const routes = {
         Jili:  <all.Names />,
-        Christopher: <all ColorSlider />,
+        Christopher: <all.ColorSlider />,
         Aaron: <all.TicTacToe />,
         Damien: <all.ColorBox />,
         Dakota: <all.DakotaPageD />,
