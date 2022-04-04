@@ -7,7 +7,7 @@ const routes = {
         Christopher: <all.ColorSlider />,
         Aaron: <all.TicTacToe />,
         Damien: <all.ColorBox />,
-        Dakota: <all.DakotaPageD />,
+        Dakota: <all.DakotaPage />,
         Lukas: <all.MovieForm />,
         Jacob: <all.App21 />,
         Dan: <all.CircleClicker/>,
