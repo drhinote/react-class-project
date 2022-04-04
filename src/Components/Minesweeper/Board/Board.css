@@ -6,3 +6,7 @@ button{
   place-items: center;
   grid-template-columns: repeat(8, 0fr);
 }
+.winner {
+  font-weight: bolder;
+  font-size: large;
+}
