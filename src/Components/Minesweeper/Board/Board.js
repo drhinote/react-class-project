@@ -6,12 +6,14 @@ import { useEffect } from "react/cjs/react.production.min";
 export default function Board({ height, width, mines, checkMines }) {
   const [board, setBoard] = useState([])
   const [disabled, setDisabled] = useState(false)
+  const [total, setTotal] = useState(0)
+  const [winState, setWinState] = useState(false)
 
   function createBoard() {
     setDisabled(false)
     let gameBoard = []
     let minesPlanted = 0
-    let index = 1
+    let index = 0
     for (let x = 0; x < height; x++) {
       gameBoard.push([])
       for (let y = 0; y < width; y++) {
@@ -27,20 +29,24 @@ export default function Board({ height, width, mines, checkMines }) {
         minesPlanted++
       }
     }
+    setTotal(index)
     checkMines(gameBoard)
     setBoard(gameBoard)
   }
 
   function clickReveal(index) {
     let tempBoard = [...board]
+    let tempTotal = total
     for (let x = 0; x < height; x++) {
       for (let y = 0; y < width; y++) {
         if (tempBoard[x][y].index === index) {
           tempBoard[x][y].isRevealed = true
+          tempTotal--
         }
       }
     }
     setBoard(tempBoard)
+    setTotal(tempTotal)
   }
 
   function revealMines(){
@@ -67,8 +73,17 @@ export default function Board({ height, width, mines, checkMines }) {
         }
       }
     }
+    if(total === mines){
+      setWinState(true)
+      setDisabled(true)
+    }
   }, [board])
 
+  function winner(){
+    if(winState){
+      return <div className="winner">Congratulations, you won</div>
+    }
+  }
 
   return (
     <div>
@@ -85,7 +100,7 @@ export default function Board({ height, width, mines, checkMines }) {
           ))
         ))}
       </div>
+      {winner()}
     </div>
-
   );
 }
